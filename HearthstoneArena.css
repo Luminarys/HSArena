@@ -1,6 +1,12 @@
 h1,h3,button,input,div{text-align: center;}
-br{display: none}
-body{background-color: #D3D3D3}
-td{padding-left: 20px;padding-right: 20px;}
-button:hover{cursor: pointer;color: #FFFFFF;background: #444444}
+br{display: none;}
+body{background-color: #D3D3D3;margin:0px}
+td{padding-left: 20px;
+   padding-right: 20px;}
+button:hover{cursor: pointer;
+             color: #FFFFFF;
+             background: #444444;}
 button{border: 1px solid #444444;}
+a{text-decoration: none;
+  color: #FFFFFF}
+a:visited{color: #FFFFFF}
