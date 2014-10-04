@@ -1,27 +1,35 @@
+
 <head>
   <title>meteor-autocompletion test app</title>
+  <link rel="stylesheet" type="text/css" href="HearthstoneArena.css">
 </head>
 
 <body>
+<div>
   <h1>meteor-autocomplete test app</h1>
-  {{>search1}}
-  {{>search2}}
-  {{>search3}}
-  {{>submit}}
+<table align="center">
+  <tr>
+    <td>{{>search1}}</td>
+    <td>{{>search2}}</td>
+    <td>{{>search3}}</td>
+  </tr>
+  <tr>
+    <td colspan="3">{{>submit}}</td>
+  </tr>
+</table>
   <p id="result">Pick card</p>
   {{>nextPick}}
+</div>
 </body>
 <template name="nextPick">
   <button id="finish">Next Pick</button>
 </template>
 <template name="submit">
   <button class="inc" type="button">Submit Stuff</button>
-
 </template>
 <template name="search1">
   <h3>Search 1</h3>
   <input type="text" id="searchBox1">
-
 </template>
 <template name="search2">
   <h3>Search 2</h3>
