@@ -1,0 +1,33 @@
+<head>
+  <title>meteor-autocompletion test app</title>
+</head>
+
+<body>
+  <h1>meteor-autocomplete test app</h1>
+  {{>search1}}
+  {{>search2}}
+  {{>search3}}
+  {{>submit}}
+  <p id="result">Pick card</p>
+  {{>nextPick}}
+</body>
+<template name="nextPick">
+  <button id="finish">Next Pick</button>
+</template>
+<template name="submit">
+  <button class="inc" type="button">Submit Stuff</button>
+
+</template>
+<template name="search1">
+  <h3>Search 1</h3>
+  <input type="text" id="searchBox1">
+
+</template>
+<template name="search2">
+  <h3>Search 2</h3>
+  <input type="text" id="searchBox2">
+</template>
+<template name="search3">
+  <h3>Search 3</h3>
+  <input type="text" id="searchBox3">
+</template>
