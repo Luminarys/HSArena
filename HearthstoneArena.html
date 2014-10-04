@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<div>
+<div style="font-family: Impact, Charcoal, sans-serif">
   <h1>Hearthstone Arena Drafter</h1>
 <table align="center">
   <tr>
@@ -14,28 +14,28 @@
     <td>{{>search3}}</td>
   </tr>
   <tr>
-    <td colspan="3" style="height: 25px">{{>submit}}</td>
+    <td colspan="3" style="height: 25px;padding-top: 25px">{{>submit}}</td>
   </tr>
 </table>
-  <p id="result">Pick card</p>
+  <p id="result">Your best card is</p>
   {{>nextPick}}
 </div>
 </body>
 <template name="nextPick">
-  <button id="finish">Next Pick</button>
+  <button id="finish">Next Card</button>
 </template>
 <template name="submit">
-  <button class="inc" type="button">Submit Stuff</button>
+  <button class="inc" type="button">Find Best Card</button>
 </template>
 <template name="search1">
-  <h3>Search 1</h3>
+  <h3>1st Card</h3>
   <input type="text" id="searchBox1">
 </template>
 <template name="search2">
-  <h3>Search 2</h3>
+  <h3>2nd Card</h3>
   <input type="text" id="searchBox2">
 </template>
 <template name="search3">
-  <h3>Search 3</h3>
+  <h3>3rd Card</h3>
   <input type="text" id="searchBox3">
 </template>
