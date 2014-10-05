@@ -1,6 +1,7 @@
 h1,h3,button,input,div{text-align: center;}
 br{display: none;}
-body{background-color: #D3D3D3;margin:0px}
+body{background-color: #D3D3D3;
+     margin:0px}
 td{padding-left: 20px;
    padding-right: 20px;}
 button:hover{cursor: pointer;
@@ -10,3 +11,5 @@ button{border: 1px solid #444444;}
 a{text-decoration: none;
   color: #FFFFFF}
 a:visited{color: #FFFFFF}
+div.class td{margin-bottom: 30px;margin-top: 30px;}
+img{height: 179px;width: 125px}
