@@ -5,12 +5,6 @@
 </head>
 
 <body>
-<div style="font-family: Arial, Helvetica, sans-serif">
-{{>b}}
-</div>
-</body>
-
-<template name="b">
   <div style="background-color: #333333;height: 60px;width:100%;color: #FFFFFF;font-size: large">
   <table style="width: 100%">
     <tr>
@@ -18,6 +12,56 @@
     </tr>
   </table>
 </div>
+<div id="body" style="font-family: Arial, Helvetica, sans-serif">
+
+{{>b}}
+
+</div>
+<div id="class" style="font-family: Arial, Helvetica, sans-serif">
+  {{>druid}}
+{{>hunter}}
+{{>mage}}
+{{>paladin}}
+{{>priest}}
+{{>rogue}}
+{{>shaman}}
+{{>warlock}}
+{{>warrior}}
+</div>
+
+
+</body>
+
+<template name = "druid">
+      <button type="button">Druid</button>
+</template>
+<template name = "hunter">
+    <button>Hunter</button>
+</template>
+<template name = "mage">
+    <button>Mage</button>
+</template>
+<template name = "paladin">
+      <button>Paladin</button>
+</template>
+<template name = "priest">
+    <button>Priest</button>
+</template>
+<template name = "rogue">
+    <button>Rogue</button>
+</template>
+<template name = "shaman">
+      <button>Shaman</button>
+</template>
+<template name = "warlock">
+    <button>Warlock</button>
+</template>
+<template name = "warrior">
+    <button>Warrior</button>
+</template>
+
+<template name="b">
+  
 
   <h1>Hearthstone Arena Draft Picker</h1>
   <div style="position: fixed;top: 135px;right: 30%">{{>reset}}</div>
