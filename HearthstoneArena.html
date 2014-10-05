@@ -1,14 +1,14 @@
 
 <head>
   <title>Hearthstone Arena Draft Picker</title>
-  <link rel="stylesheet" type="text/css" href="HearthstoneArena.css">
+  <link rel="stylesheet" type="text/css" href="Hearthstone.css">
 </head>
 
 <body>
   <div style="background-color: #333333;height: 60px;width:100%;color: #FFFFFF;font-size: large">
   <table style="width: 100%">
     <tr>
-      <td style="vertical-align: middle;height: 60px;width:100%;text-align: center;color: #FFFFFF"><a href="/one">Home</a> &#8226; <a href="/three">Mulligan Calculator</a> &#8226; Arena Draft Picker</td>
+      <td style="vertical-align: middle;height: 60px;width:100%;text-align: center;color: #FFFFFF"><!--<a href="/one">Home</a> &#8226; <a href="/three">Mulligan Calculator</a> &#8226; -->Arena Draft Picker</td>
     </tr>
   </table>
 </div>
@@ -17,47 +17,55 @@
 {{>b}}
 
 </div>
-<div id="class" style="font-family: Arial, Helvetica, sans-serif">
-  {{>druid}}
-{{>hunter}}
-{{>mage}}
-{{>paladin}}
-{{>priest}}
-{{>rogue}}
-{{>shaman}}
-{{>warlock}}
-{{>warrior}}
+<div id="class" style="font-family: Arial, Helvetica, sans-serif; ">
+<table align="center">
+  <tr>
+  <td style="padding-bottom: 30px;padding-top: 30px;">{{>druid}}</td>
+<td style="padding-bottom: 30px;padding-top: 30px;">{{>hunter}}</td>
+<td style="padding-bottom: 30px;padding-top: 30px;">{{>mage}}</td>
+  </tr>
+  <tr>
+<td style="padding-bottom: 30px;padding-top: 30px;">{{>paladin}}</td>
+<td style="padding-bottom: 30px;padding-top: 30px;">{{>priest}}</td>
+<td style="padding-bottom: 30px;padding-top: 30px;">{{>rogue}}</td>
+  </tr>
+  <tr>
+<td style="padding-bottom: 30px;padding-top: 30px;">{{>shaman}}</td>
+<td style="padding-bottom: 30px;padding-top: 30px;">{{>warlock}}</td>
+<td style="padding-bottom: 30px;padding-top: 30px;">{{>warrior}}</td>
+  </tr>
+</table>
 </div>
 
 
 </body>
 
 <template name = "druid">
-      <button type="button">Druid</button>
+      <button type="button" style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/6/63/Malfurion_Stormrage-f.png" /></button>
 </template>
 <template name = "hunter">
-    <button>Hunter</button>
+    <button style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/thumb/d/d8/Rexxar-f.png/250px-Rexxar-f.png?version=3f80009401aa532c2fd016ecb6aad324" /></button>
 </template>
 <template name = "mage">
-    <button>Mage</button>
+    <button style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/thumb/7/73/Jaina_Proudmoore-f.png/250px-Jaina_Proudmoore-f.png?version=8f6987af96c41b0490c6b860ec332f1f" /></button>
 </template>
 <template name = "paladin">
-      <button>Paladin</button>
+      <button style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/thumb/5/53/Uther_Lightbringer-f.png/250px-Uther_Lightbringer-f.png?version=a3b28ac8beb7d3c754f78f573f84c525" /></button>
 </template>
 <template name = "priest">
-    <button>Priest</button>
+    <button style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/thumb/b/b3/Anduin_Wrynn-f.png/250px-Anduin_Wrynn-f.png?version=dcf2a676e7e8062dd1d74601937d126b" /></button>
 </template>
 <template name = "rogue">
-    <button>Rogue</button>
+    <button style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/thumb/7/72/Valeera_Sanguinar-f.png/250px-Valeera_Sanguinar-f.png?version=1f89186cc42687bfbcb06b67174e19af" /></button>
 </template>
 <template name = "shaman">
-      <button>Shaman</button>
+      <button style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/thumb/f/f4/Thrall-f.png/250px-Thrall-f.png?version=55cd557d01b0794fd48b9d20c819e756" /></button>
 </template>
 <template name = "warlock">
-    <button>Warlock</button>
+    <button style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/thumb/3/38/Guldan-f.png/250px-Guldan-f.png?version=4bc860759dd1a18d6c5c1996697fa469" /></button>
 </template>
 <template name = "warrior">
-    <button>Warrior</button>
+    <button style="border-style: none;background-color: #D3D3D3"><img src="http://hydra-media.cursecdn.com/hearthstone.gamepedia.com/thumb/5/5c/Garrosh_Hellscream-f.png/250px-Garrosh_Hellscream-f.png?version=a3871db3340c521300d7e3deb968b1ba" /></button>
 </template>
 
 <template name="b">
