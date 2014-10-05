@@ -1,19 +1,27 @@
 
 <head>
   <title>Hearthstone Arena Draft Picker</title>
-  <link rel="stylesheet" type="text/css" href="Hearthstone.css">
+  <link rel="stylesheet" type="text/css" href="HearthstoneArena.css">
 </head>
 
 <body>
 <div style="font-family: Arial, Helvetica, sans-serif">
-<div style="background-color: #333333;height: 60px;width:100%;color: #FFFFFF;font-size: large">
+{{>b}}
+</div>
+</body>
+
+<template name="b">
+  <div style="background-color: #333333;height: 60px;width:100%;color: #FFFFFF;font-size: large">
   <table style="width: 100%">
     <tr>
-      <td style="vertical-align: middle;height: 60px;width:100%;text-align: center;"><a href="">Home</a> &#8226; <a href="HearthstoneCalc.html">Mulligan Calculator</a> &#8226; Arena Draft Picker</td>
+      <td style="vertical-align: middle;height: 60px;width:100%;text-align: center;"><a href="/one">Home</a> &#8226; <a href="/three">Mulligan Calculator</a> &#8226; Arena Draft Picker</td>
     </tr>
   </table>
 </div>
+
   <h1>Hearthstone Arena Draft Picker</h1>
+  {{>reset}}
+  <h5>Card #1</h5>
 <table align="center">
   <tr>
     <td>{{>search1}}</td>
@@ -26,8 +34,14 @@
 </table>
   <p id="result">The best card is</p>
   {{>nextPick}}
-</div>
-</body>
+  
+</template>
+
+<template name = "reset">
+    <button id="reset">Reset Arena Run</button>
+
+</template>
+
 <template name="nextPick">
   <button id="finish">Next Card</button>
 </template>
