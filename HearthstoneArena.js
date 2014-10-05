@@ -2,17 +2,18 @@
   cards = new Mongo.Collection("mod");
 
 if (Meteor.isClient) {
+
         local = new Mongo.Collection(null);
 
       //Client side card collection that will be altered
     
     Meteor.startup(function(){
-    $("#result").hide();
-    $("#finish").hide();
     reset();
+
   });
   $(document).ready(function(){
-    reset();
+        reset();
+
   });
   function copyshit(){
      local.find().forEach(function(x){
@@ -44,10 +45,12 @@ if (Meteor.isClient) {
     Session.set("dseven",2.00);
     Session.set("init",false);
     Session.set("enable",true);
+
   }
 Template.submit.events = {
   
   'click button.inc': function(){
+
         if (!Session.get("init")) {
           copyshit();
           
@@ -461,7 +464,11 @@ function reprioritizeVals(percent){
 }
 Template.nextPick.events = {
   'click button#finish': function(){
-                          $(".inp").prop("disabled", false);
+        var count = Session.get("count")+1;
+
+        $(".inp").prop("disabled", false);
+        
+        $("h5").text("Card #"+count);
 
           $("#searchBox1").val("");
           $("#searchBox2").val("");
@@ -472,9 +479,22 @@ Template.nextPick.events = {
           
   }
 }
+Template.reset.events = {
+  'click button#reset': function(){
+            $("h5").text("Card #1");
+   $("#searchBox1").val("");
+          $("#searchBox2").val("");
+          $("#searchBox3").val("");
+             $("#result").fadeOut();
+          $("#finish").fadeOut();
+          $(".inc").fadeIn();
+    reset();
+  }
+}
+
 Template.search1.rendered = function () {
-  AutoCompletion.init("input#searchBox1");
   
+  AutoCompletion.init("input#searchBox1");
 }
 
 Template.search1.events = {
@@ -835,7 +855,7 @@ cards.insert({name:"Preparation", cost:1, tier:5})
 cards.insert({name:"Shadowstep", cost:1, tier:7})
 cards.insert({name:"Cold Blood", cost:1, tier:4,degrade: 1})
 cards.insert({name:"Conceal", cost:1, tier:9})
-cards.insert({name:"Deadly Poison", cost:1, tier:1})
+cards.insert({name:"Deadly Poison", cost:1, tier:1, degrade: 2})
 cards.insert({name:"Sinister Strike", cost:1, tier:9})
 cards.insert({name:"Betrayal", cost:2, tier:3, degrade: 1})
 cards.insert({name:"Blade Flurry", cost:2, tier:6})
