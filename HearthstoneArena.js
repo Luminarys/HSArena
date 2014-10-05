@@ -28,6 +28,7 @@ if (Meteor.isClient) {
   function reset() {
     $("#result").hide();
     $("#finish").hide();
+    $('#body').hide();
     Session.set("count",0.00);
     Session.set("one",3.00);
     Session.set("two",6.00);
@@ -52,7 +53,7 @@ Template.submit.events = {
   'click button.inc': function(){
 
         if (!Session.get("init")) {
-          copyshit();
+          //copyshit();
           
           Session.set("init",true);
         }
@@ -125,7 +126,7 @@ Template.submit.events = {
           if (Session.get("count")>=30) {
           window.alert("Draft complete, reseting data");
           Session.set("count",0);
-          copyshit();
+          reset();
           }
   }
   
@@ -528,11 +529,115 @@ Template.search2.events = {
   }
 }
   
-
+function initialize() {
+  copyshit();
+  switch (Session.get("class")) {
+    case 1:
+      //Run Druid List Updates
+      break;
+     case 2:
+      //Run hunter List Updates
+      break;
+     case 3:
+      //Run mage List Updates
+      break;
+     case 4:
+      //Run paladin List Updates
+      break;
+     case 5:
+      //Run priest List Updates
+      break;
+     case 6:
+      //Run rogue List Updates
+      break;
+     case 7:
+      //Run shmaan List Updates
+      break;
+     case 8:
+      //Run warlock List Updates
+      break;
+     case 19:
+      //Run warrior List Updates
+      break;
+  }
+  $('#class').fadeOut("fast");
+  $('#body').fadeIn();
+}
 Template.search3.rendered = function () {
   AutoCompletion.init("input#searchBox3");
 }
-
+Template.druid.events ={
+  'click button': function(){
+    console.log("Pshed druid calss button");
+    Session.set("class",1);
+    initialize();
+  }
+  
+}
+Template.hunter.events ={
+  'click button': function(){
+    console.log("Pshed hunter calss button");
+    Session.set("class",2);
+    initialize();
+  }
+  
+}
+Template.mage.events ={
+  'click button': function(){
+    console.log("Pshed mage calss button");
+    Session.set("class",3);
+    initialize();
+  }
+  
+}
+Template.paladin.events ={
+  'click button': function(){
+    console.log("Pshed paladin calss button");
+    Session.set("class",4);
+    initialize();
+  }
+  
+}
+Template.priest.events ={
+  'click button': function(){
+    console.log("Pshed priest calss button");
+    Session.set("class",5);
+    initialize();
+  }
+  
+}
+Template.rogue.events ={
+  'click button': function(){
+    console.log("Pshed rogue calss button");
+    Session.set("class",6);
+    initialize();
+  }
+  
+}
+Template.shaman.events ={
+  'click button': function(){
+    console.log("Pshed shaman calss button");
+    Session.set("class",7);
+    initialize();
+  }
+  
+}
+Template.warlock.events ={
+  'click button': function(){
+    console.log("Pshed warlock calss button");
+    Session.set("class",8);
+    initialize();
+  }
+  
+}
+Template.warrior.events ={
+  'click button': function(){
+    console.log("Pshed warrior calss button");
+    Session.set("class",9);
+    initialize();
+  }
+  
+}
 Template.search3.events = {
   'keyup input#searchBox3': function () {
     AutoCompletion.autocomplete({
